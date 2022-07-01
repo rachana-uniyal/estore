@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: ./Dockerfile
+    image: "uniyalrachna/esote-server:latest"
+    ports:
+      - "5000:5000"
+  client:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+    image: "uniyalrachna/esote-client:latest"
+    ports:
+      - "3000:3000"
+
